@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 @Entity
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Data
+@Table(name = "payments")
 public class Payment {
 
     @Id

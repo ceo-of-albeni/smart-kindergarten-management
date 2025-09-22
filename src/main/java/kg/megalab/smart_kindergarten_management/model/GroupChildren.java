@@ -10,6 +10,7 @@ import java.time.LocalDateTime;
 @Entity
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Data
+@Table(name = "group_childrens")
 public class GroupChildren {
 
     @Id

@@ -9,6 +9,7 @@ import lombok.experimental.FieldDefaults;
 @Entity
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Data
+@Table(name = "teachers")
 public class Teacher extends BaseEntity{
 
     @Id

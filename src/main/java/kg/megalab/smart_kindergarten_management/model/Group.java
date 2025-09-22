@@ -8,6 +8,7 @@ import lombok.experimental.FieldDefaults;
 @Entity
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Data
+@Table(name = "groups")
 public class Group extends BaseEntity{
 
     @Id
