@@ -15,7 +15,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/group-category")
-@Tag(name = "GroupCategoryController", description = "Group categories management methods")
+@Tag(name = "GroupCategoryController", description = "Контроллер «Категории групп»")
 public class GroupCategoryController {
 
     private final GroupCategoryService groupCategoryService;

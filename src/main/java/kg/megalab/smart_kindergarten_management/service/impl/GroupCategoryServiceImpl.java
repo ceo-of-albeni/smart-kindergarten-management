@@ -21,7 +21,6 @@ public class GroupCategoryServiceImpl implements GroupCategoryService {
 
     public GroupCategoryServiceImpl(GroupCategoryRepo  groupCategoryRepo) {
         this.groupCategoryRepo = groupCategoryRepo;
-
     }
 
     @Override
