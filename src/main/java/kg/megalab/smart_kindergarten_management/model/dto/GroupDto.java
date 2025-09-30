@@ -13,16 +13,24 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @AllArgsConstructor
 @NoArgsConstructor
-public class GroupCategoryDto {
-
-    @NotBlank(message = "Название категории обязательно")
+public class GroupDto {
+    @NotBlank(message = "Название группы обязательно")
     String name;
 
-    @NotNull(message = "Статус активности обязателен")
-    Boolean active;
+    @NotNull(message = "Макс. количество детей обязательно")
+    @Positive(message = "Количество должно быть положительным")
+    Integer maxChildrenCount;
 
     @NotNull(message = "Цена обязательна")
     @Positive(message = "Цена должна быть положительной")
     Integer price;
 
+    @NotNull(message = "Няня обязательна")
+    Long nannyId;
+
+    @NotNull(message = "Категория группы обязательна")
+    Long groupCategoryId;
+
+    @NotNull(message = "Учитель обязателен")
+    Long teacherId;
 }
