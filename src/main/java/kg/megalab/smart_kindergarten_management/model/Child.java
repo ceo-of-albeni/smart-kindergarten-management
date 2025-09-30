@@ -19,8 +19,8 @@ public class Child {
     @Id
     @GeneratedValue
     Long id;
-    String first_name;
-    String last_name;
+    String firstName;
+    String lastName;
     String patronymic;
-    LocalDate date_of_birth;
+    LocalDate dateOfBirth;
 }

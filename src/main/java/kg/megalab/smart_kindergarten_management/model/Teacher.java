@@ -7,18 +7,19 @@ import lombok.Data;
 import lombok.experimental.FieldDefaults;
 
 @Entity
-@FieldDefaults(level = AccessLevel.PRIVATE)
 @Data
+@FieldDefaults(level = AccessLevel.PRIVATE)
 @Table(name = "teachers")
 public class Teacher extends BaseEntity{
 
     @Id
     @GeneratedValue
     Long id;
-    String first_name;
-    String last_name;
+    @Column(name = "first_name")
+    String firstName;
+    String lastName;
     String patronymic;
     @Enumerated(EnumType.STRING)
-    TeacherDegree teacher_degree;
+    TeacherDegree teacherDegree;
     boolean active;
 }

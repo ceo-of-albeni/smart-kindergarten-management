@@ -16,8 +16,8 @@ public class GroupChildren {
     @Id
     @GeneratedValue
     Long id;
-    LocalDateTime start_date;
-    LocalDateTime end_date;
+    LocalDateTime startDate;
+    LocalDateTime endDate;
     double price;
 
     @ManyToOne

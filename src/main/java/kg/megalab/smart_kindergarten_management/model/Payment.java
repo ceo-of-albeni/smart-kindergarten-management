@@ -17,9 +17,9 @@ public class Payment {
     @GeneratedValue
     Long id;
     double amount;
-    LocalDateTime payment_date;
+    LocalDateTime paymentDate;
 
     @ManyToOne
     @JoinColumn(name = "group_children_id ")
-    GroupChildren group_children;
+    GroupChildren groupChildren;
 }

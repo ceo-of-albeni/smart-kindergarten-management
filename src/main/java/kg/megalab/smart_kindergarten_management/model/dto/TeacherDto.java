@@ -7,6 +7,7 @@ import lombok.Data;
 
 @Data
 public class TeacherDto {
+
     @NotBlank(message = "Имя обязательно")
     private String firstName;
 
@@ -15,10 +16,11 @@ public class TeacherDto {
 
     private String patronymic;
 
-    @NotBlank(message = "Степень/роль обязательна")
+    @NotNull(message = "Степень/роль обязательна")
     private TeacherDegree teacherDegree;
 
     @NotNull(message = "Статус обязателен")
     private Boolean active;
+
 }
 

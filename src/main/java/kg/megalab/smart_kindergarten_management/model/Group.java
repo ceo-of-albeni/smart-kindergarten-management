@@ -15,7 +15,7 @@ public class Group extends BaseEntity{
     @GeneratedValue
     Long id;
     String name;
-    int max_children_count;
+    int maxChildrenCount;
     double price;
 
     @ManyToOne
@@ -24,7 +24,7 @@ public class Group extends BaseEntity{
 
     @ManyToOne
     @JoinColumn(name = "group_category_id")
-    GroupCategory group_category;
+    GroupCategory groupCategory;
 
     @ManyToOne
     @JoinColumn(name = "teacher_id ")
