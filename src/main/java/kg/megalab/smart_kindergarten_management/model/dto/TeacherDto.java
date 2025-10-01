@@ -3,24 +3,31 @@ package kg.megalab.smart_kindergarten_management.model.dto;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import kg.megalab.smart_kindergarten_management.enums.TeacherDegree;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.FieldDefaults;
 
 @Data
+@FieldDefaults(level = AccessLevel.PRIVATE)
+@AllArgsConstructor
+@NoArgsConstructor
 public class TeacherDto {
 
     @NotBlank(message = "Имя обязательно")
-    private String firstName;
+    String firstName;
 
     @NotBlank(message = "Фамилия обязательна")
-    private String lastName;
+    String lastName;
 
-    private String patronymic;
+    String patronymic;
 
     @NotNull(message = "Степень/роль обязательна")
-    private TeacherDegree teacherDegree;
+    TeacherDegree teacherDegree;
 
     @NotNull(message = "Статус обязателен")
-    private Boolean active;
+    Boolean active;
 
 }
 
