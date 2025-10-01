@@ -21,7 +21,6 @@ public class GroupCategoryServiceImpl implements GroupCategoryService {
 
     public GroupCategoryServiceImpl(GroupCategoryRepo  groupCategoryRepo) {
         this.groupCategoryRepo = groupCategoryRepo;
-
     }
 
     @Override
@@ -51,8 +50,7 @@ public class GroupCategoryServiceImpl implements GroupCategoryService {
 
     @Override
     public GroupCategoryDto deleteGroupCategory(Long id) {
-
-        GroupCategory groupCategory = groupCategoryRepo.findById(id)
+        groupCategoryRepo.findById(id)
                 .orElseThrow(() -> new RuntimeException("Категория с таким ID не найдена"));
 
         groupCategoryRepo.deleteById(id);

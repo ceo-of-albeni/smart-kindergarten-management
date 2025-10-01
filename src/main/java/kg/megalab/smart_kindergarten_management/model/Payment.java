@@ -2,7 +2,9 @@ package kg.megalab.smart_kindergarten_management.model;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
 import java.time.LocalDateTime;
@@ -10,6 +12,8 @@ import java.time.LocalDateTime;
 @Entity
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "payments")
 public class Payment {
 
@@ -17,9 +21,9 @@ public class Payment {
     @GeneratedValue
     Long id;
     double amount;
-    LocalDateTime payment_date;
+    LocalDateTime paymentDate;
 
     @ManyToOne
     @JoinColumn(name = "group_children_id ")
-    GroupChildren group_children;
+    GroupChildren groupChildren;
 }

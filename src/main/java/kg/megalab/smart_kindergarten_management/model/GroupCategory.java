@@ -1,16 +1,20 @@
 package kg.megalab.smart_kindergarten_management.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "group_categories")
 public class GroupCategory extends BaseEntity{
 
@@ -20,4 +24,7 @@ public class GroupCategory extends BaseEntity{
     String name;
     boolean active;
     double price;
+
+    @OneToMany(mappedBy = "groupCategory")
+    List<Group> groups = new ArrayList<>();
 }
