@@ -16,7 +16,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/teacher")
-@Tag(name = "TeacherController", description = "Контроллер «Учителя»")
+@Tag(name = "Teacher Controller", description = "Контроллер «Учителя»")
 public class TeacherController {
 
     private final TeacherService teacherService;

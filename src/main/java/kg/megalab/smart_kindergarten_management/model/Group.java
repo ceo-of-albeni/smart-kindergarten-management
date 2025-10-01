@@ -27,6 +27,6 @@ public class Group extends BaseEntity{
     GroupCategory groupCategory;
 
     @ManyToOne
-    @JoinColumn(name = "teacher_id ")
+    @JoinColumn(name = "teacher_id")
     Teacher teacher;
 }

@@ -1,11 +1,8 @@
 package kg.megalab.smart_kindergarten_management.service.impl;
 
-import kg.megalab.smart_kindergarten_management.exception.GroupCategoryNotFound;
 import kg.megalab.smart_kindergarten_management.exception.TeacherNotFound;
 import kg.megalab.smart_kindergarten_management.mapper.TeacherMapper;
-import kg.megalab.smart_kindergarten_management.model.GroupCategory;
 import kg.megalab.smart_kindergarten_management.model.Teacher;
-import kg.megalab.smart_kindergarten_management.model.dto.GroupCategoryDto;
 import kg.megalab.smart_kindergarten_management.model.dto.TeacherDto;
 import kg.megalab.smart_kindergarten_management.repository.TeacherRepo;
 import kg.megalab.smart_kindergarten_management.service.TeacherService;
