@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository;
 public interface GroupCategoryRepo extends JpaRepository<GroupCategory, Long> {
 
     boolean existsByNameIgnoreCase(String name);
+
 }
