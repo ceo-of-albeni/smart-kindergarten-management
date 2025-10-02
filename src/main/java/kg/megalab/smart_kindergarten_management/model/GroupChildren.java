@@ -1,5 +1,6 @@
 package kg.megalab.smart_kindergarten_management.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -7,7 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 @FieldDefaults(level = AccessLevel.PRIVATE)
@@ -20,9 +21,9 @@ public class GroupChildren {
     @Id
     @GeneratedValue
     Long id;
-    LocalDateTime startDate;
-    LocalDateTime endDate;
-    double price;
+    LocalDate startDate;
+    LocalDate endDate;
+    Double price;
 
     @ManyToOne
     @JoinColumn(name = "children_id")
@@ -30,5 +31,6 @@ public class GroupChildren {
 
     @ManyToOne
     @JoinColumn(name = "group_id")
+    @JsonIgnore
     Group group;
 }
