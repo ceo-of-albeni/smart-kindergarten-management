@@ -29,5 +29,5 @@ public class EnrollChildDto {
     @NotNull(message = "ID группы обязателен")
     Long groupId;
 
-    Integer price; // если индивидуальная цена отличается от категории
+    Integer price;
 }
