@@ -23,7 +23,7 @@ public class GroupChildren {
     Long id;
     LocalDate startDate;
     LocalDate endDate;
-    double price;
+    Double price;
 
     @ManyToOne
     @JoinColumn(name = "children_id")
