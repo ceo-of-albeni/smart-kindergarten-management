@@ -5,4 +5,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 @ResponseStatus(code = HttpStatus.CONFLICT)
 public class GroupCategoryNameUnique extends RuntimeException{
+    public GroupCategoryNameUnique() {
+        super("Группа с таким названием уже есть!");
+    }
 }
